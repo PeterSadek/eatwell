@@ -9,11 +9,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
+import { useState, useEffect } from "react";
 
 const pages = ["HOME", "ABOUT", "OFFER", "MENU", "NEWS", "GALLERY", "CONTACT"];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -23,11 +25,21 @@ function NavBar() {
     setAnchorElNav(null);
   };
 
+  const handleScroll = () => {
+    setScrollPosition(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <AppBar
-      position="static"
+      position="fixed"
       sx={{
-        backgroundColor: { xs: "black", md: "transparent" },
+        backgroundColor: scrollPosition > 50 ? "black" : "transparent",
+        transition: "background-color 0.3s ease",
         paddingInline: "2rem",
       }}
     >
