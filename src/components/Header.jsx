@@ -1,6 +1,7 @@
-import { NavBar } from "./NavBar";
+// import { NavBar } from "./NavBar";
 import { Paper, Stack, Typography, Button } from "@mui/material";
 import headerImage from "../assets/headerImage.jpg";
+import NavBar from "./NavBar";
 
 const Header = () => {
   const styles = {
