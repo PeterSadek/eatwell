@@ -15,7 +15,7 @@ import chef2 from "../assets/chef2.jpg";
 const ContactUs = () => {
   return (
     <Box sx={{ marginBlock: "4rem" }}>
-      <Stack direction="column" alignItems="center">
+      <Stack direction="column" alignItems="center" textAlign="center">
         <Typography component="h2" variant="h2" sx={{ fontWeight: 500 }}>
           Get In Touch
         </Typography>
@@ -26,14 +26,12 @@ const ContactUs = () => {
       </Stack>
 
       <Stack
-        direction="row"
-        spacing={10}
-        justifyContent="center"
+        spacing={5}
+        direction={{ xs: "column", md: "row" }}
         sx={{ marginTop: "3rem" }}
-        flexWrap="wrap"
-        gap="2rem"
+        justifyContent={{ md: "center" }}
       >
-        <Stack direction="column" spacing={2} sx={{ width: "50%" }}>
+        <Stack direction="column" spacing={2} width={{ xs: "100%", md: "50%" }}>
           <TextField
             fullWidth
             label="Name"
@@ -64,7 +62,7 @@ const ContactUs = () => {
           </Box>
         </Stack>
 
-        <Card sx={{ maxWidth: 345 }}>
+        <Card>
           <CardActionArea>
             <CardMedia component="img" height="200" image={chef2} alt="chef" />
             <CardContent>

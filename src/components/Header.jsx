@@ -21,7 +21,7 @@ const Header = () => {
         direction="column"
         alignItems="center"
         justifyContent="center"
-        sx={{ height: "100vh" }}
+        sx={{ textAlign: "center", height: "100%" }}
       >
         <Typography component="h1" variant="h1" sx={{ fontWeight: "bold" }}>
           Welcome To EatWell
