@@ -14,12 +14,12 @@ import chef2 from "../assets/chef2.jpg";
 
 const ContactUs = () => {
   return (
-    <Box sx={{ marginBlock: "4rem" }}>
+    <Box sx={{ marginBlock: "7rem" }}>
       <Stack direction="column" alignItems="center" textAlign="center">
         <Typography component="h2" variant="h2" sx={{ fontWeight: 500 }}>
           Get In Touch
         </Typography>
-        <Typography sx={{ color: "grey", fontSize: "1.3rem" }}>
+        <Typography sx={{ color: "grey", fontSize: "1.1rem" }}>
           Far far away, behind the word mountains, far from the countries
           Vokalia and Consonantia, there live the blind texts.
         </Typography>
