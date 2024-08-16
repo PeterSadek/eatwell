@@ -1,7 +1,9 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography, useTheme } from "@mui/material";
+
 import chef2 from "../assets/chef2.jpg";
 
 const Welcome = () => {
+  const theme = useTheme();
   return (
     <Box sx={{ marginBlock: "7rem" }}>
       <Stack
@@ -14,7 +16,12 @@ const Welcome = () => {
           textAlign="start"
           width={{ xs: "100%", md: "50%" }}
         >
-          <Typography color="grey" fontSize="1.3rem" letterSpacing="0.3rem">
+          <Typography
+            color={theme.palette.primary.dark}
+            fontSize="1.3rem"
+            letterSpacing="0.3rem"
+            mb="0.5rem"
+          >
             OUR STORY
           </Typography>
           <Typography
@@ -25,11 +32,16 @@ const Welcome = () => {
           >
             Welcome
           </Typography>
-          <Typography sx={{ color: "grey", fontSize: "1.1rem" }} mb="1rem">
+          <Typography
+            sx={{ color: theme.palette.primary.dark, fontSize: "1.1rem" }}
+            mb="1rem"
+          >
             Far far away, behind the word mountains, far from the countries
             Vokalia and Consonantia, there live the blind texts.
           </Typography>
-          <Typography sx={{ color: "grey", fontSize: "1.1rem" }}>
+          <Typography
+            sx={{ color: theme.palette.primary.dark, fontSize: "1.1rem" }}
+          >
             A small river named Duden flows by their place and supplies it with
             the necessary regelialia. It is a paradisematic country, in which
             roasted parts of sentences fly into your mouth.
@@ -38,14 +50,14 @@ const Welcome = () => {
             <Button
               variant="outlined"
               sx={{
-                color: "grey",
-                borderColor: "lightgrey",
+                color: theme.palette.primary.dark,
+                borderColor: theme.palette.primary.dark,
                 padding: "1rem",
                 paddingInline: "3rem",
                 "&:hover": {
-                  borderColor: "orange",
-                  backgroundColor: "orange",
-                  color: "white",
+                  borderColor: theme.palette.secondary.main,
+                  backgroundColor: theme.palette.secondary.main,
+                  color: theme.palette.primary.light,
                 },
                 marginTop: "2rem",
               }}

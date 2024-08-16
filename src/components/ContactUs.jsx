@@ -8,18 +8,27 @@ import {
   Stack,
   TextField,
   Typography,
+  useTheme,
 } from "@mui/material";
 
 import chef2 from "../assets/chef2.jpg";
 
 const ContactUs = () => {
+  const theme = useTheme();
   return (
     <Box sx={{ marginBlock: "7rem" }}>
       <Stack direction="column" alignItems="center" textAlign="center">
-        <Typography component="h2" variant="h2" sx={{ fontWeight: 500 }}>
+        <Typography
+          component="h2"
+          variant="h2"
+          sx={{ fontWeight: 500 }}
+          mb="0.5rem"
+        >
           Get In Touch
         </Typography>
-        <Typography sx={{ color: "grey", fontSize: "1.1rem" }}>
+        <Typography
+          sx={{ color: theme.palette.primary.dark, fontSize: "1.1rem" }}
+        >
           Far far away, behind the word mountains, far from the countries
           Vokalia and Consonantia, there live the blind texts.
         </Typography>
@@ -36,26 +45,48 @@ const ContactUs = () => {
             fullWidth
             label="Name"
             id="fullWidth"
-            sx={{ backgroundColor: "lightcyan" }}
+            sx={{
+              backgroundColor: "lightcyan",
+              "& .MuiInputLabel-root": {
+                color: theme.palette.primary.dark,
+              },
+            }}
           />
           <TextField
             fullWidth
             label="Email"
             id="fullWidth"
-            sx={{ backgroundColor: "lightcyan" }}
+            sx={{
+              backgroundColor: "lightcyan",
+              "& .MuiInputLabel-root": {
+                color: theme.palette.primary.dark,
+              },
+            }}
           />
           <TextField
-            placeholder="Write your message"
+            label="Write your message"
             multiline
             rows={5}
             maxRows={4}
-            sx={{ backgroundColor: "lightcyan" }}
+            sx={{
+              backgroundColor: "lightcyan",
+              "& .MuiInputLabel-root": {
+                color: theme.palette.primary.dark,
+              },
+            }}
           />
           <Box>
             {" "}
             <Button
               variant="contained"
-              sx={{ paddingInline: "1rem", backgroundColor: "orange" }}
+              sx={{
+                padding: "1rem",
+                paddingInline: "2rem",
+                backgroundColor: theme.palette.secondary.main,
+                color: theme.palette.primary.light,
+                "&:hover": { backgroundColor: theme.palette.secondary.dark },
+                textTransform: "none",
+              }}
             >
               Send Message
             </Button>
@@ -89,7 +120,10 @@ const ContactUs = () => {
                 sx={{ marginBottom: "2rem" }}
               >
                 <Typography>Email:</Typography>{" "}
-                <Typography component="span" sx={{ color: "orange" }}>
+                <Typography
+                  component="span"
+                  sx={{ color: theme.palette.secondary.main }}
+                >
                   info@yoursite.com
                 </Typography>
               </Typography>

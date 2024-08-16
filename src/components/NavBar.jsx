@@ -10,10 +10,12 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { useState, useEffect } from "react";
+import { useTheme } from "@mui/material";
 
 const pages = ["HOME", "ABOUT", "OFFER", "MENU", "NEWS", "GALLERY", "CONTACT"];
 
 function NavBar() {
+  const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -56,7 +58,7 @@ function NavBar() {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: theme.palette.primary.light,
               textDecoration: "none",
             }}
           >
@@ -89,7 +91,7 @@ function NavBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              sx={{ color: theme.palette.primary.light }}
             >
               <MenuIcon />
             </IconButton>

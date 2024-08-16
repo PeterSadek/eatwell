@@ -1,9 +1,9 @@
-// import { NavBar } from "./NavBar";
-import { Paper, Stack, Typography, Button } from "@mui/material";
+import { Paper, Stack, Typography, Button, useTheme } from "@mui/material";
 import headerImage from "../assets/headerImage.jpg";
 import NavBar from "./NavBar";
 
 const Header = () => {
+  const theme = useTheme();
   const styles = {
     paperContainer: {
       backgroundImage: `url(${headerImage})`,
@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <Paper
       style={styles.paperContainer}
-      sx={{ height: "100vh", color: "white" }}
+      sx={{ height: "100vh", color: theme.palette.primary.light }}
     >
       <NavBar />
 
@@ -26,19 +26,19 @@ const Header = () => {
         <Typography component="h1" variant="h1" sx={{ fontWeight: "bold" }}>
           Welcome To EatWell
         </Typography>
-        <Typography sx={{ color: "lightgrey" }}>
+        <Typography sx={{ color: theme.palette.primary.main }}>
           Come and eat well with our delicious & healthy foods.
         </Typography>
         <Button
           variant="outlined"
           sx={{
-            color: "white",
-            borderColor: "white",
+            color: theme.palette.primary.light,
+            borderColor: theme.palette.primary.light,
             padding: "1rem",
             paddingInline: "2rem",
             "&:hover": {
-              borderColor: "white",
-              backgroundColor: "white",
+              borderColor: theme.palette.primary.light,
+              backgroundColor: theme.palette.primary.light,
               color: "black",
             },
             marginTop: "2rem",
