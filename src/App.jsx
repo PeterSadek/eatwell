@@ -3,6 +3,7 @@ import "./App.css";
 import ContactUs from "./components/ContactUs";
 import { Box } from "@mui/material";
 import Welcome from "./components/Welcome";
+import Offers from "./components/Offers";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Box sx={{ marginInline: "4rem" }}>
         <Welcome />
+        <Offers />
         <ContactUs />
       </Box>
     </>
