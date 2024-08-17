@@ -32,14 +32,19 @@ const Gallery = () => {
       <Stack
         direction={{ xs: "column", md: "row" }}
         flexWrap="wrap"
-        justifyContent="space-between"
+        spacing={1}
         alignItems="center"
         sx={{ mb: "3rem", mt: "2.5rem" }}
       >
         {images.map((image) => (
           <Box
             key={image}
-            sx={{ width: "350px", height: "auto", borderRadius: 1 }}
+            sx={{
+              width: 350,
+              height: "auto",
+              borderRadius: 1,
+              flexGrow: 1,
+            }}
           >
             <img
               src={image}

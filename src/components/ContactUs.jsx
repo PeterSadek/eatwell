@@ -10,7 +10,6 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-
 import chef2 from "../assets/chef2.jpg";
 
 const ContactUs = () => {

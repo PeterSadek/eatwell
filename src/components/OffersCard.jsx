@@ -8,7 +8,7 @@ import { Button, CardActionArea, useTheme } from "@mui/material";
 export default function OffersCard({ image, desc, price, name }) {
   const theme = useTheme();
   return (
-    <Card sx={{ maxWidth: 350 }}>
+    <Card sx={{ maxWidth: 350, flexGrow: 1 }}>
       <CardActionArea>
         <CardMedia
           component="img"

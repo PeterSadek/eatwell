@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { useState, useEffect } from "react";
 import { useTheme } from "@mui/material";
 
-const pages = ["HOME", "ABOUT", "OFFER", "MENU", "NEWS", "GALLERY", "CONTACT"];
+const pages = ["HOME", "ABOUT", "OFFER", "GALLERY", "CONTACT"];
 
 function NavBar() {
   const theme = useTheme();

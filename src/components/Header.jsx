@@ -48,10 +48,10 @@ const Header = () => {
         <Button
           variant="outlined"
           sx={{
+            width: { xs: "85%", md: "15%" },
             color: theme.palette.primary.light,
             borderColor: theme.palette.primary.light,
             padding: { md: "1rem", xs: "0.7rem" },
-            paddingInline: { md: "2rem", xs: "8rem" },
             "&:hover": {
               borderColor: theme.palette.primary.light,
               backgroundColor: theme.palette.primary.light,
