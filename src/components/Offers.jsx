@@ -57,7 +57,7 @@ export default function Offers() {
         <Typography
           component="h2"
           variant="h2"
-          sx={{ fontWeight: 500 }}
+          sx={{ fontWeight: 400, fontSize: { md: "3.5rem", xs: "2.5rem" } }}
           mb="0.5rem"
         >
           Our Offer This Summer
@@ -76,35 +76,26 @@ export default function Offers() {
         navigation
         pagination={{ clickable: true }}
         modules={[Navigation, Pagination]}
-        style={{ padding: "1rem" }}
         loop={false}
       >
         {tabsData.map((cards, index) => (
           <SwiperSlide key={index}>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                mb: "3rem",
-                mt: "2.5rem",
-              }}
+            <Stack
+              direction={{ xs: "column", md: "row" }}
+              alignItems="center"
+              spacing={1}
+              sx={{ justifyContent: "space-between", mb: "3rem", mt: "2.5rem" }}
             >
-              <Stack
-                direction={{ xs: "column", md: "row" }}
-                spacing={2}
-                alignItems="center"
-              >
-                {cards.map((card, idx) => (
-                  <OffersCard
-                    key={idx}
-                    image={card.image}
-                    desc={desc}
-                    price={card.price}
-                    name={card.name}
-                  />
-                ))}
-              </Stack>
-            </Box>
+              {cards.map((card, idx) => (
+                <OffersCard
+                  key={idx}
+                  image={card.image}
+                  desc={desc}
+                  price={card.price}
+                  name={card.name}
+                />
+              ))}
+            </Stack>
           </SwiperSlide>
         ))}
       </Swiper>

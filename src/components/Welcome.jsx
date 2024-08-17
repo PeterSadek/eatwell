@@ -27,7 +27,7 @@ const Welcome = () => {
           <Typography
             component="h2"
             variant="h2"
-            sx={{ fontWeight: 500 }}
+            sx={{ fontWeight: 400, fontSize: { md: "3.5rem", xs: "2.5rem" } }}
             mb="2rem"
           >
             Welcome
@@ -52,8 +52,8 @@ const Welcome = () => {
               sx={{
                 color: theme.palette.primary.dark,
                 borderColor: theme.palette.primary.dark,
-                padding: "1rem",
-                paddingInline: "3rem",
+                padding: { md: "1rem", xs: "0.7rem" },
+                paddingInline: { md: "2rem", xs: "1rem" },
                 "&:hover": {
                   borderColor: theme.palette.secondary.main,
                   backgroundColor: theme.palette.secondary.main,

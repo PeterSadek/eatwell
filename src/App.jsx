@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Header />
-      <Box sx={{ marginInline: "4rem" }}>
+      <Box sx={{ marginInline: { md: "6rem", xs: "1rem" } }}>
         <Welcome />
         <Offers />
         <ContactUs />

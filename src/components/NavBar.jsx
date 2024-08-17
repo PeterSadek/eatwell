@@ -42,11 +42,14 @@ function NavBar() {
       sx={{
         backgroundColor: scrollPosition > 50 ? "black" : "transparent",
         transition: "background-color 0.3s ease",
-        paddingInline: "2rem",
+        paddingInline: { md: "2rem", xs: 0 },
       }}
     >
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar
+          disableGutters
+          sx={{ justifyContent: { xs: "space-between" } }}
+        >
           <Typography
             variant="h6"
             noWrap
@@ -93,7 +96,20 @@ function NavBar() {
               onClick={handleOpenNavMenu}
               sx={{ color: theme.palette.primary.light }}
             >
-              <MenuIcon />
+              <MenuIcon sx={{ color: theme.palette.primary.dark }} />
+              <Typography
+                variant="h6"
+                noWrap
+                sx={{
+                  ml: 0.4,
+                  fontFamily: "monospace",
+                  fontWeight: 700,
+                  letterSpacing: ".3rem",
+                  color: theme.palette.primary.dark,
+                }}
+              >
+                MENU
+              </Typography>
             </IconButton>
             <Menu
               id="menu-appbar"

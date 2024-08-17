@@ -21,7 +21,7 @@ const ContactUs = () => {
         <Typography
           component="h2"
           variant="h2"
-          sx={{ fontWeight: 500 }}
+          sx={{ fontWeight: 400, fontSize: { md: "3.5rem", xs: "2.5rem" } }}
           mb="0.5rem"
         >
           Get In Touch
@@ -38,9 +38,9 @@ const ContactUs = () => {
         spacing={5}
         direction={{ xs: "column", md: "row" }}
         sx={{ marginTop: "3rem" }}
-        justifyContent={{ md: "center" }}
+        justifyContent={{ md: "space-between" }}
       >
-        <Stack direction="column" spacing={2} width={{ xs: "100%", md: "50%" }}>
+        <Stack direction="column" spacing={2} width={{ xs: "100%", md: "60%" }}>
           <TextField
             fullWidth
             label="Name"
@@ -93,9 +93,14 @@ const ContactUs = () => {
           </Box>
         </Stack>
 
-        <Card>
+        <Card sx={{ width: { md: "30%", xs: "100%" } }}>
           <CardActionArea>
-            <CardMedia component="img" height="200" image={chef2} alt="chef" />
+            <CardMedia
+              component="img"
+              sx={{ height: { md: "200" } }}
+              image={chef2}
+              alt="chef"
+            />
             <CardContent>
               <Typography
                 variant="body2"
