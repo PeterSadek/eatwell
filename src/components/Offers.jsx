@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./swiper.css";
 import { Navigation, Pagination } from "swiper/modules";
+import Animation from "./Animation";
 
 const desc =
   "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.";
@@ -87,13 +88,14 @@ export default function Offers() {
               sx={{ justifyContent: "space-between", mb: "3rem", mt: "2.5rem" }}
             >
               {cards.map((card, idx) => (
-                <OffersCard
-                  key={idx}
-                  image={card.image}
-                  desc={desc}
-                  price={card.price}
-                  name={card.name}
-                />
+                <Animation key={idx}>
+                  <OffersCard
+                    image={card.image}
+                    desc={desc}
+                    price={card.price}
+                    name={card.name}
+                  />
+                </Animation>
               ))}
             </Stack>
           </SwiperSlide>

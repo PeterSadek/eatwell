@@ -6,10 +6,20 @@ import food3 from "../assets/food3.jpg";
 import food4 from "../assets/food4.jpg";
 import food5 from "../assets/food5.jpg";
 import food6 from "../assets/food6.jpg";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const images = [food1, food2, food3, food4, food5, food6];
 
 const Gallery = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
   const theme = useTheme();
   return (
     <Box sx={{ marginBlock: "7rem" }}>
@@ -30,6 +40,15 @@ const Gallery = () => {
         </Typography>
       </Stack>
       <Stack
+        variants={{
+          hidden: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        ref={ref}
+        initial="hidden"
+        animate="visible"
+        transition={{ type: "tween", duration: 3, delay: 0.5 }}
+        component={motion.div}
         direction={{ xs: "column", md: "row" }}
         flexWrap="wrap"
         spacing={1}

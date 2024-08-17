@@ -11,6 +11,7 @@ import {
   useTheme,
 } from "@mui/material";
 import chef2 from "../assets/chef2.jpg";
+import Animation from "./Animation";
 
 const ContactUs = () => {
   const theme = useTheme();
@@ -40,56 +41,66 @@ const ContactUs = () => {
         justifyContent={{ md: "space-between" }}
       >
         <Stack direction="column" spacing={2} width={{ xs: "100%", md: "60%" }}>
-          <TextField
-            fullWidth
-            label="Name"
-            id="fullWidth"
-            sx={{
-              backgroundColor: "lightcyan",
-              "& .MuiInputLabel-root": {
-                color: theme.palette.primary.dark,
-              },
-            }}
-          />
-          <TextField
-            fullWidth
-            label="Email"
-            id="fullWidth"
-            sx={{
-              backgroundColor: "lightcyan",
-              "& .MuiInputLabel-root": {
-                color: theme.palette.primary.dark,
-              },
-            }}
-          />
-          <TextField
-            label="Write your message"
-            multiline
-            rows={5}
-            maxRows={4}
-            sx={{
-              backgroundColor: "lightcyan",
-              "& .MuiInputLabel-root": {
-                color: theme.palette.primary.dark,
-              },
-            }}
-          />
-          <Box>
-            {" "}
-            <Button
-              variant="contained"
+          <Animation>
+            <TextField
+              fullWidth
+              label="Name"
+              id="fullWidth"
               sx={{
-                padding: "1rem",
-                paddingInline: "2rem",
-                backgroundColor: theme.palette.secondary.main,
-                color: theme.palette.primary.light,
-                "&:hover": { backgroundColor: theme.palette.secondary.dark },
-                textTransform: "none",
+                backgroundColor: "lightcyan",
+                "& .MuiInputLabel-root": {
+                  color: theme.palette.primary.dark,
+                },
               }}
-            >
-              Send Message
-            </Button>
-          </Box>
+            />
+          </Animation>
+
+          <Animation>
+            <TextField
+              fullWidth
+              label="Email"
+              id="fullWidth"
+              sx={{
+                backgroundColor: "lightcyan",
+                "& .MuiInputLabel-root": {
+                  color: theme.palette.primary.dark,
+                },
+              }}
+            />
+          </Animation>
+          <Animation>
+            <TextField
+              fullWidth
+              label="Write your message"
+              multiline
+              rows={5}
+              maxRows={4}
+              sx={{
+                backgroundColor: "lightcyan",
+                "& .MuiInputLabel-root": {
+                  color: theme.palette.primary.dark,
+                },
+              }}
+            />
+          </Animation>
+          <Animation>
+            <Box>
+              {" "}
+              <Button
+                variant="contained"
+                sx={{
+                  padding: "1rem",
+                  paddingInline: "2rem",
+                  backgroundColor: theme.palette.secondary.main,
+                  color: theme.palette.primary.light,
+                  "&:hover": { backgroundColor: theme.palette.secondary.dark },
+                  textTransform: "none",
+                }}
+              >
+                Send Message
+              </Button>
+            </Box>
+          </Animation>
         </Stack>
 
         <Card sx={{ width: { md: "30%", xs: "100%" } }}>
