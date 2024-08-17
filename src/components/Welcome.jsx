@@ -66,8 +66,13 @@ const Welcome = () => {
             </Button>
           </Box>
         </Stack>
-        <Box width={{ xs: "100%", md: "50%" }}>
-          <img src={chef2} alt="chef" width="100%" />
+        <Box width={{ xs: "100%", md: "50%", borderRadius: 5 }}>
+          <img
+            src={chef2}
+            alt="chef"
+            width="100%"
+            style={{ borderRadius: "inherit" }}
+          />
         </Box>
       </Stack>
     </Box>
