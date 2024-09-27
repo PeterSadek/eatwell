@@ -1,4 +1,3 @@
-import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -12,11 +11,11 @@ import MenuItem from "@mui/material/MenuItem";
 import { useState, useEffect } from "react";
 import { useTheme } from "@mui/material";
 
-const pages = ["HOME", "ABOUT", "OFFER", "GALLERY", "CONTACT"];
+const pages = ["HOME", "ABOUT", "OFFERS", "GALLERY", "CONTACT"];
 
 function NavBar() {
   const theme = useTheme();
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleOpenNavMenu = (event) => {
@@ -25,6 +24,14 @@ function NavBar() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const handleScrollToSection = (section) => {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    handleCloseNavMenu();
   };
 
   const handleScroll = () => {
@@ -74,7 +81,7 @@ function NavBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => handleScrollToSection(page)}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
@@ -82,12 +89,7 @@ function NavBar() {
             ))}
           </Box>
 
-          <Box
-            sx={{
-              display: { xs: "flex", md: "none" },
-              ml: "auto",
-            }}
-          >
+          <Box sx={{ display: { xs: "flex", md: "none" }, ml: "auto" }}>
             <IconButton
               size="large"
               aria-label="open navigation menu"
@@ -125,12 +127,13 @@ function NavBar() {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
+              sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem
+                  key={page}
+                  onClick={() => handleScrollToSection(page)}
+                >
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}

@@ -19,6 +19,7 @@ const Header = () => {
         },
         backgroundSize: "cover",
       }}
+      id="HOME"
     >
       <NavBar />
       <Stack

@@ -22,7 +22,7 @@ const Gallery = () => {
   }, [isInView]);
   const theme = useTheme();
   return (
-    <Box sx={{ marginBlock: "7rem" }}>
+    <Box sx={{ marginBlock: "7rem" }} id="GALLERY">
       <Stack direction="column" alignItems="center" textAlign="center">
         <Typography
           component="h2"

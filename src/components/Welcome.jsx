@@ -5,7 +5,7 @@ import Animation from "./Animation";
 const Welcome = () => {
   const theme = useTheme();
   return (
-    <Box sx={{ marginBlock: "7rem" }}>
+    <Box sx={{ marginBlock: "7rem" }} id="ABOUT">
       <Stack
         spacing={5}
         direction={{ xs: "column", md: "row" }}

@@ -45,7 +45,7 @@ export default function Offers() {
   const theme = useTheme();
 
   return (
-    <Box sx={{ marginBlock: "7rem" }}>
+    <Box sx={{ marginBlock: "7rem" }} id="OFFERS">
       <Stack direction="column" alignItems="center" textAlign="center">
         <Typography
           color={theme.palette.primary.dark}

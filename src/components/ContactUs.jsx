@@ -16,7 +16,7 @@ import Animation from "./Animation";
 const ContactUs = () => {
   const theme = useTheme();
   return (
-    <Box sx={{ marginBlock: "7rem" }}>
+    <Box sx={{ marginBlock: "7rem" }} id="CONTACT">
       <Stack direction="column" alignItems="center" textAlign="center">
         <Typography
           component="h2"
@@ -54,7 +54,6 @@ const ContactUs = () => {
               }}
             />
           </Animation>
-
           <Animation>
             <TextField
               fullWidth
