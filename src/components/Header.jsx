@@ -1,6 +1,6 @@
 import { Paper, Stack, Typography, Button, useTheme } from "@mui/material";
-import headerImage from "../assets/headerImage.jpg";
-import headerImageMob2 from "../assets/headerImageMob2.jpg";
+import headerImage from "../assets/headerImage.webp";
+import headerImageMob2 from "../assets/headerImageMob2.webp";
 import NavBar from "./NavBar";
 import Animation from "./Animation";
 // import { motion } from "framer-motion";
