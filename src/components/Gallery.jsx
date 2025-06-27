@@ -59,7 +59,7 @@ const Gallery = () => {
           <Box
             key={image}
             sx={{
-              width: 350,
+              width: { sm: 350 },
               height: "auto",
               borderRadius: 1,
               flexGrow: 1,

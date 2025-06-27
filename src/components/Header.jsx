@@ -18,6 +18,11 @@ const Header = () => {
           xs: `url(${headerImageMob2})`,
         },
         backgroundSize: "cover",
+        backgroundPosition: {
+          xs: "center",
+          sm: "0% 0%",
+        },
+        borderRadius: "0",
       }}
       id="HOME"
     >
